@@ -221,7 +221,7 @@ legend('30pi/180','70pi/180','110pi/180','150pi/180','190pi/180','230pi/180','31
 %% 5) Obtaining the tuning curve of a neuron i (i=1...98) by plotting the firing rate averaged across
 %time and trials as a function of direction
 
-i=63;
+i=28;
 
 for k=1:length(trial(1,:))
 
