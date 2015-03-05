@@ -218,10 +218,12 @@ ylabel('y position')
 title('Mean Trajectory of Hand in  all Directions for 100 Trials')
 legend('30pi/180','70pi/180','110pi/180','150pi/180','190pi/180','230pi/180','310pi/180','350pi/180')
 
-%% 5) Obtaining the tuning curve of a neuron i (i=1...98) by plotting the firing rate averaged across
+%5) Obtaining the tuning curve of a neuron i (i=1...98) by plotting the firing rate averaged across
 %time and trials as a function of direction
 
-i=28;
+i=63;
+average_spike_rate=zeros(1,100);
+average_trial_spike_rate=zeros(1,100);
 
 for k=1:length(trial(1,:)) % For all directions
 
@@ -231,10 +233,10 @@ for k=1:length(trial(1,:)) % For all directions
     end
     
     
-    average_spike_rate(k)=sum(average_trial_spike_rate)/length(average_trial_spike_rate);
+    average_spike_rate(k)=sum(average_trial_spike_rate(n))/length(average_trial_spike_rate);
     stdev(k)=std(average_trial_spike_rate/length(trial))
     
-   % x(k)=sum(total_spikes)/(300*100)
+    
     
 end
 
